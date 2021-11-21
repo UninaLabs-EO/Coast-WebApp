@@ -26,3 +26,7 @@ def GetRouteValues(df_path, dir_path, prod1, prod2):
 
     out = {'idx':idx, f'{prod1}':Prod1, f'{prod2}':Prod2, 'links':hrefs}
     return out
+
+
+if __name__ == "main":
+    pass

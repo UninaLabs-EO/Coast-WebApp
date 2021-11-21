@@ -31,7 +31,7 @@ crossorigin=""></script>
                     <!-- <p class="mb-0">Cillum ad ut irure tempor velit nostrud occaecat ullamco aliqua anim Lorem sint. Veniam sint duis incididunt do esse magna mollit excepteur laborum qui. Id id reprehenderit sit est eu aliqua occaecat quis et velit excepteur laborum mollit dolore eiusmod. Ipsum dolor in occaecat commodo et voluptate minim reprehenderit mollit pariatur. Deserunt non laborum enim et cillum eu deserunt excepteur ea incididunt minim occaecat.</p> -->
                 
                         <div class="col-sm-12">
-                            <h5 class="mt-4">Basic Pills</h5>
+                            <h5 class="mt-4">Table</h5>
                             <hr>
                             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                 <li class="nav-item">
@@ -63,13 +63,13 @@ crossorigin=""></script>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        {% for i in idx %}
+                                                        {% for i in a1['idx'] %}
                                                             <tr>
                                                                 <th scope="row">{{ i }}</th>
-                                                                <td>{{CSK[i]}}</td>
-                                                                <td>{{SAO[i]}}</td>
-                                                                <td>{{hrefs[i].split('_')[-1].split('.')[0]}}</td>
-                                                                <td><a href="./CSK-SAO/{{hrefs[i]}}">URL</a></td>
+                                                                <td>{{a1['CSK'][i]}}</td>
+                                                                <td>{{a1['SAO'][i]}}</td>
+                                                                <td>{{a1['links'][i].split('_')[-1].split('.')[0]}}</td>
+                                                                <td><a href="./CSK-SAO/{{ a1['links'][i] }}">URL</a></td>
                                                             </tr>
                                                         {% endfor %}
                                                     </tbody>
@@ -86,7 +86,7 @@ crossorigin=""></script>
                                                 <!-- [ Hover-table ] start -->
                                                 <div class="card-header">
                                                     <h5>Adriatico CSK-SENTINEL</h5>
-                                                    <span class="d-block m-t-5">Lista prodotti Cosmo & SAOCOM </span>
+                                                    <span class="d-block m-t-5">Lista prodotti Cosmo & Sentinel </span>
                                                 </div>
                                                 <div class="card-block table-border-style">
                                                     <div class="table-responsive">
@@ -95,19 +95,19 @@ crossorigin=""></script>
                                                                 <tr>
                                                                     <th>#</th>
                                                                     <th>COSMO-SKYMED</th>
-                                                                    <th>SAOCOM</th>
+                                                                    <th>SENTINEL</th>
                                                                     <th>MATCH</th>
                                                                     <th>LINK</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
-                                                                {% for i in out['idx'] %}
+                                                                {% for i in a2['idx'] %}
                                                                     <tr>
                                                                         <th scope="row">{{ i }}</th>
-                                                                        <td>{{out['CSK'][i]}}</td>
-                                                                        <td>{{out['SAO'][i]}}</td>
-                                                                        <td>{{out['links'][i].split('_')[-1].split('.')[0]}}</td>
-                                                                        <td><a href="./CSK-SAO/{{ out['links'][i] }}">URL</a></td>
+                                                                        <td>{{a2['CSK'][i]}}</td>
+                                                                        <td>{{a2['SEN'][i]}}</td>
+                                                                        <td>{{a2['links'][i].split('_')[-1].split('.')[0]}}</td>
+                                                                        <td><a href="./CSK-SEN/{{ a2['links'][i] }}">URL</a></td>
                                                                     </tr>
                                                                 {% endfor %}
                                                             </tbody>
