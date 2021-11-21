@@ -101,13 +101,13 @@ crossorigin=""></script>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
-                                                                {% for i in idx %}
+                                                                {% for i in out['idx'] %}
                                                                     <tr>
                                                                         <th scope="row">{{ i }}</th>
-                                                                        <td>{{CSK[i]}}</td>
-                                                                        <td>{{SAO[i]}}</td>
-                                                                        <td>{{hrefs[i].split('_')[-1].split('.')[0]}}</td>
-                                                                        <td><a href="./CSK-SAO/{{hrefs[i]}}">URL</a></td>
+                                                                        <td>{{out['CSK'][i]}}</td>
+                                                                        <td>{{out['SAO'][i]}}</td>
+                                                                        <td>{{out['links'][i].split('_')[-1].split('.')[0]}}</td>
+                                                                        <td><a href="./CSK-SAO/{{ out['links'][i] }}">URL</a></td>
                                                                     </tr>
                                                                 {% endfor %}
                                                             </tbody>

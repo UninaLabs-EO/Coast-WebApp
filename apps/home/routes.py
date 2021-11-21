@@ -3,6 +3,7 @@
 Copyright (c) 2019 - present AppSeed.us
 """
 
+from Router_Values import GetRouteValues
 from apps.home import blueprint
 from flask import render_template, request
 from flask_login import login_required
@@ -33,6 +34,8 @@ def route_template(template):
     hrefs = sorted(hrefs, key=lambda x: int(x.split('_')[1].split('__')[0]))
     hrefs_adr_1 = [x.split('\\')[-1] for x in hrefs]
 
+    out = GetRouteValues('apps\\templates\\home\\Adriatico\\CSK-SAO\\ALL_Adriatic_CSK-SAO.csv', 'apps\\templates\\home\\Adriatico\\CSK-SAO', 'CSK','SAO')
+
     try:
 
         if not template.endswith('.html'):
@@ -42,7 +45,7 @@ def route_template(template):
         segment = get_segment(request)
 
         # Serve the file (if exists) from app/templates/home/FILE.html
-        return render_template("home/" + template, segment=segment, hrefs=hrefs_adr_1, CSK=CSK_adr_1, SAO=SAO_adr_1, idx=idx,
+        return render_template("home/" + template, segment=segment, hrefs=hrefs_adr_1, CSK=CSK_adr_1, SAO=SAO_adr_1, idx=idx, out=out,
         )
 
     except TemplateNotFound:
