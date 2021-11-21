@@ -124,11 +124,93 @@ crossorigin=""></script>
 
                 
                 </div>
+
+
+
+                
                 <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                    <p class="mb-0">Culpa dolor voluptate do laboris laboris irure reprehenderit id incididunt duis pariatur mollit aute magna pariatur consectetur. Eu veniam duis non ut dolor deserunt commodo et minim in quis laboris ipsum velit id veniam. Quis ut consectetur adipisicing officia excepteur non sit. Ut et elit aliquip labore Lorem enim eu. Ullamco mollit occaecat dolore ipsum id officia mollit qui esse anim eiusmod do sint minim consectetur qui.</p>
+                    <!-- <p class="mb-0">Culpa dolor voluptate do laboris laboris irure reprehenderit id incididunt duis pariatur mollit aute magna pariatur consectetur. Eu veniam duis non ut dolor deserunt commodo et minim in quis laboris ipsum velit id veniam. Quis ut consectetur adipisicing officia excepteur non sit. Ut et elit aliquip labore Lorem enim eu. Ullamco mollit occaecat dolore ipsum id officia mollit qui esse anim eiusmod do sint minim consectetur qui.</p> -->
+                                                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                                            <!-- [ Hover-table ] start -->
+                                                            <div class="card-header">
+                                                                <h5>ALBOREAN CSK-SAO</h5>
+                                                                <span class="d-block m-t-5">Lista prodotti Cosmo & SAOCOM </span>
+                                                            </div>
+                                                            <div class="card-block table-border-style">
+                                                                <div class="table-responsive">
+                                                                    <table class="table table-hover">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th>#</th>
+                                                                                <th>COSMO-SKYMED</th>
+                                                                                <th>SAOCOM</th>
+                                                                                <th>MATCH</th>
+                                                                                <th>LINK</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            {% for i in b1['idx'] %}
+                                                                                <tr>
+                                                                                    <th scope="row">{{ i }}</th>
+                                                                                    <td>{{b1['CSK'][i]}}</td>
+                                                                                    <td>{{b1['SAO'][i]}}</td>
+                                                                                    <td>{{b1['links'][i].split('_')[-1].split('.')[0]}}</td>
+                                                                                    <td><a href="./Alborean/CSK-SAO/{{ b1['links'][i] }}">URL</a></td>
+                                                                                </tr>
+                                                                            {% endfor %}
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                            <!-- [ Hover-table ] end --> 
+                                                        </div>
+
+                
+                
                 </div>
                 <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-                    <p class="mb-0">Fugiat id quis dolor culpa eiusmod anim velit excepteur proident dolor aute qui magna. Ad proident laboris ullamco esse anim Lorem Lorem veniam quis Lorem irure occaecat velit nostrud magna nulla. Velit et et proident Lorem do ea tempor officia dolor. Reprehenderit Lorem aliquip labore est magna commodo est ea veniam consectetur.</p>
+                    <!-- <p class="mb-0">Fugiat id quis dolor culpa eiusmod anim velit excepteur proident dolor aute qui magna. Ad proident laboris ullamco esse anim Lorem Lorem veniam quis Lorem irure occaecat velit nostrud magna nulla. Velit et et proident Lorem do ea tempor officia dolor. Reprehenderit Lorem aliquip labore est magna commodo est ea veniam consectetur.</p> -->
+                
+                
+                
+                                                                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                                                        <!-- [ Hover-table ] start -->
+                                                                        <div class="card-header">
+                                                                            <h5>ALBOREAN CSK-SAO</h5>
+                                                                            <span class="d-block m-t-5">Lista prodotti Cosmo & SAOCOM </span>
+                                                                        </div>
+                                                                        <div class="card-block table-border-style">
+                                                                            <div class="table-responsive">
+                                                                                <table class="table table-hover">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>#</th>
+                                                                                            <th>COSMO-SKYMED</th>
+                                                                                            <th>SAOCOM</th>
+                                                                                            <th>MATCH</th>
+                                                                                            <th>LINK</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody>
+                                                                                        {% for i in b1['idx'] %}
+                                                                                            <tr>
+                                                                                                <th scope="row">{{ i }}</th>
+                                                                                                <td>{{b1['CSK'][i]}}</td>
+                                                                                                <td>{{b1['SAO'][i]}}</td>
+                                                                                                <td>{{b1['links'][i].split('_')[-1].split('.')[0]}}</td>
+                                                                                                <td><a href="./Alborean/CSK-SAO/{{ b1['links'][i] }}">URL</a></td>
+                                                                                            </tr>
+                                                                                        {% endfor %}
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+                                                                        <!-- [ Hover-table ] end --> 
+                                                                    </div>
+                
+                
+                
+                
                 </div>
                 <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
                     <p class="mb-0">Eu dolore ea ullamco dolore Lorem id cupidatat excepteur reprehenderit consectetur elit id dolor proident in cupidatat officia. Voluptate excepteur commodo labore nisi cillum duis aliqua do. Aliqua amet qui mollit consectetur nulla mollit velit aliqua veniam nisi id do Lorem deserunt amet. Culpa ullamco sit adipisicing labore officia magna elit nisi in aute tempor commodo eiusmod.
