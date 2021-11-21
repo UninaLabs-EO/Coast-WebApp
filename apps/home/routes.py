@@ -15,19 +15,7 @@ import pandas as pd
 @login_required
 def index():
 
-    df = pd.read_csv('apps\\templates\\home\\Adriatico\\CSK-SAO\\ALL_Adriatic_CSK-SAO.csv')
-
-    CSK = df['CSK'].to_list() 
-    SAO = df['SAO'].to_list()
-    idx = df['Unnamed: 0'].to_list()
-
-
-    hrefs = glob('apps\\templates\\home\\Adriatico\\CSK-SAO\\*.html')
-    hrefs = sorted(hrefs, key=lambda x: int(x.split('_')[1].split('__')[0]))
-    hrefs = [x.split('\\')[-1] for x in hrefs]
-
-
-    return render_template('home/index.html', segment='index', hrefs=hrefs, CSK=CSK, SAO=SAO, idx=idx,
+    return render_template('home/index.html', segment='index', 
     )
 
 @blueprint.route('/<template>')
@@ -36,14 +24,14 @@ def route_template(template):
 
     df = pd.read_csv('apps\\templates\\home\\Adriatico\\CSK-SAO\\ALL_Adriatic_CSK-SAO.csv')
 
-    CSK = df['CSK'].to_list() 
-    SAO = df['SAO'].to_list()
+    CSK_adr_1 = df['CSK'].to_list() 
+    SAO_adr_1 = df['SAO'].to_list()
     idx = df['Unnamed: 0'].to_list()
 
 
     hrefs = glob('apps\\templates\\home\\Adriatico\\CSK-SAO\\*.html')
     hrefs = sorted(hrefs, key=lambda x: int(x.split('_')[1].split('__')[0]))
-    hrefs = [x.split('\\')[-1] for x in hrefs]
+    hrefs_adr_1 = [x.split('\\')[-1] for x in hrefs]
 
     try:
 
@@ -54,7 +42,7 @@ def route_template(template):
         segment = get_segment(request)
 
         # Serve the file (if exists) from app/templates/home/FILE.html
-        return render_template("home/" + template, segment=segment, hrefs=hrefs, CSK=CSK, SAO=SAO, idx=idx,
+        return render_template("home/" + template, segment=segment, hrefs=hrefs_adr_1, CSK=CSK_adr_1, SAO=SAO_adr_1, idx=idx,
         )
 
     except TemplateNotFound:
