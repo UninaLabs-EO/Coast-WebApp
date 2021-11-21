@@ -1,0 +1,48 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Dashboard {% endblock %} 
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+crossorigin=""></script>
+{% endblock stylesheets %}
+
+<div class="row">
+    <!--[  section ] start-->
+    <div class="col-md-6 col-xl-4">
+        <div class="card daily-sales">
+            <div class="card-block">
+                <h6 class="mb-4"> Battery</h6>
+                <div class="row d-flex align-items-center">
+                    <div class="col-9">
+                        <h3 class="f-w-300 d-flex align-items-center m-b-0"><i class="feather icon-battery text-c-green f-30 m-r-10"></i>Depth of discharge</h3>
+                    </div>
+
+                    <div class="col-3 text-right">
+                        <p class="m-b-0">5%</p>
+                    </div>
+                </div>
+                <div class="progress m-t-30" style="height: 12px;">
+                    <div class="progress-bar progress-c-theme" role="progressbar" style="width: 5%;" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <br>
+                <div class="row d-flex align-items-center">
+                    <div class="col-9">
+                    <h3 class="f-w-300 d-flex align-items-center m-b-0"><i class="feather icon-battery-charging text-c-green f-30 m-r-10"></i>Voltage</h3>
+                    </div>
+                </div>
+
+            <div class="col-3 text-right">
+            <p class="m-b-0">15 V</p>
+        </div>
+        
+        
+        <div class="progress m-t-30" style="height: 12px;">
+          <div class="progress-bar progress-c-theme" role="progressbar" style="width: 75%;" aria-valuenow="15" aria-valuemin="0" aria-valuemax="20"></div>
+        </div>
+    </div>
+   
+</div>
