@@ -19,6 +19,12 @@ def index():
     return render_template('home/index.html', segment='index', 
     )
 
+@blueprint.route('/adriatico')
+@login_required
+def index():
+    return render_template('home/adriatico.html', segment='adriatico', 
+    )
+
 
 @blueprint.route('/<template>')
 @login_required
