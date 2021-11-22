@@ -1,0 +1,79 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Typography {% endblock %} 
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+            <!-- [ Hover-table ] start -->
+                         <div class="card-header">
+                              <h5>Alborean CSK-SAO</h5>
+                              <span class="d-block m-t-5">Lista prodotti Cosmo & SAOCOM </span>
+                         </div>
+                         <div class="card-block table-border-style">
+                              <div class="table-responsive">
+                                   <table class="table table-hover">
+                                        <thead>
+                                        <tr>
+                                             <th>#</th>
+                                             <th>COSMO-SKYMED</th>
+                                             <th>SAOCOM</th>
+                                             <th>MATCH</th>
+                                             <th>LINK</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for i in b1['idx'] %}
+                                                <tr>
+                                                    <th scope="row">{{ i }}</th>
+                                                    <td>{{b1['CSK'][i]}}</td>
+                                                    <td>{{b1['SAO'][i]}}</td>
+                                                    <td>{{b1['links'][i].split('_')[-1].split('.')[0]}}</td>
+                                                    <td><a href="./Alborean/CSK-SAO/{{ b1['links'][i] }}">URL</a></td>
+                                                </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                   </table>
+                              </div>
+                         </div>
+                         <!-- [ Hover-table ] end --> 
+
+                            <!-- [ Hover-table ] start -->
+                            <div class="card-header">
+                                <h5>Alborean CSK-SEN</h5>
+                                <span class="d-block m-t-5">Lista prodotti Cosmo & SENTINEL </span>
+                           </div>
+                           <div class="card-block table-border-style">
+                                <div class="table-responsive">
+                                     <table class="table table-hover">
+                                          <thead>
+                                          <tr>
+                                               <th>#</th>
+                                               <th>COSMO-SKYMED</th>
+                                               <th>SENTINEL</th>
+                                               <th>MATCH</th>
+                                               <th>LINK</th>
+                                          </tr>
+                                          </thead>
+                                          <tbody>
+                                              {% for i in b2['idx'] %}
+                                                  <tr>
+                                                      <th scope="row">{{ i }}</th>
+                                                      <td>{{b2['CSK'][i]}}</td>
+                                                      <td>{{b2['SEN'][i]}}</td>
+                                                      <td>{{b2['links'][i].split('_')[-1].split('.')[0]}}</td>
+                                                      <td><a href="./Alborean/CSK-SAO/{{ b2['links'][i] }}">URL</a></td>
+                                                  </tr>
+                                              {% endfor %}
+                                          </tbody>
+                                     </table>
+                                </div>
+                           </div>
+                           <!-- [ Hover-table ] end -->
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

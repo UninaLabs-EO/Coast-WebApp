@@ -33,7 +33,8 @@ def route_template(template):
 
     ega_csk_sen = GetRouteValues('apps\\templates\\home\\Egadi\\CSK-SEN\\ALL_Egadi_CSK-SEN.csv', 'apps\\templates\\home\\Egadi\\CSK-SEN', 'CSK','SEN')
 
-
+    sar_csk_sao = GetRouteValues('apps\\templates\\home\\Sardegna\\CSK-SAO\\ALL_Sardegna_CSK-SAO.csv', 'apps\\templates\\home\\Sardegna\\CSK-SAO', 'CSK','SAO')
+    sar_csk_sen = GetRouteValues('apps\\templates\\home\\Sardegna\\CSK-SEN\\ALL_Sardegna_CSK-SEN.csv', 'apps\\templates\\home\\Sardegna\\CSK-SEN', 'CSK','SEN')
 
 
     try:
@@ -49,6 +50,7 @@ def route_template(template):
             a1=adr_csk_sao, a2=adr_csk_sen,
             b1=alb_csk_sao, b2=alb_csk_sen,
             c1=ega_csk_sen,
+            d1=sar_csk_sao, d2=sar_csk_sen,
         )
 
     except TemplateNotFound:
@@ -58,157 +60,157 @@ def route_template(template):
         return render_template('home/page-500.html'), 500
 
 
-# @blueprint.route('Sardegna/CSK-SAO/<map>')
-# @login_required
-# def route_CSK_SAO4(map):
+@blueprint.route('Sardegna/CSK-SAO/<map>')
+@login_required
+def route_CSK_SAO4(map):
 
-#     try:
+    try:
 
-#         if not map.endswith('.html'):
-#             map += '.html'
+        if not map.endswith('.html'):
+            map += '.html'
 
-#         # Detect the current page
-#         segment = get_segment(request)
+        # Detect the current page
+        segment = get_segment(request)
 
-#         # Serve the file (if exists) from app/templates/home/FILE.html
-#         return render_template("home/Sardegna/CSK-SAO/" + map, segment=segment)
+        # Serve the file (if exists) from app/templates/home/FILE.html
+        return render_template("home/Sardegna/CSK-SAO/" + map, segment=segment)
 
-#     except TemplateNotFound:
-#         return render_template('home/page-404.html'), 404
+    except TemplateNotFound:
+        return render_template('home/page-404.html'), 404
 
-#     except:
-#         return render_template('home/page-500.html'), 500
+    except:
+        return render_template('home/page-500.html'), 500
 
-# @blueprint.route('Sardegna/CSK-SEN/<map>')
-# @login_required
-# def route_CSK_SEN4(map):
+@blueprint.route('Sardegna/CSK-SEN/<map>')
+@login_required
+def route_CSK_SEN4(map):
 
-#     try:
+    try:
 
-#         if not map.endswith('.html'):
-#             map += '.html'
+        if not map.endswith('.html'):
+            map += '.html'
 
-#         # Detect the current page
-#         segment = get_segment(request)
+        # Detect the current page
+        segment = get_segment(request)
 
-#         # Serve the file (if exists) from app/templates/home/FILE.html
-#         return render_template("home/Sardegna/CSK-SEN/" + map, segment=segment)
+        # Serve the file (if exists) from app/templates/home/FILE.html
+        return render_template("home/Sardegna/CSK-SEN/" + map, segment=segment)
 
-#     except TemplateNotFound:
-#         return render_template('home/page-404.html'), 404
+    except TemplateNotFound:
+        return render_template('home/page-404.html'), 404
 
-#     except:
-#         return render_template('home/page-500.html'), 500
-
-
-# @blueprint.route('Egadi/CSK-SEN/<map>')
-# @login_required
-# def route_CSK_SEN3(map):
-
-#     try:
-
-#         if not map.endswith('.html'):
-#             map += '.html'
-
-#         # Detect the current page
-#         segment = get_segment(request)
-
-#         # Serve the file (if exists) from app/templates/home/FILE.html
-#         return render_template("home/Egadi/CSK-SEN/" + map, segment=segment)
-
-#     except TemplateNotFound:
-#         return render_template('home/page-404.html'), 404
-
-#     except:
-#         return render_template('home/page-500.html'), 500
+    except:
+        return render_template('home/page-500.html'), 500
 
 
-# @blueprint.route('Alborean/CSK-SEN/<map>')
-# @login_required
-# def route_CSK_SEN2(map):
+@blueprint.route('Egadi/CSK-SEN/<map>')
+@login_required
+def route_CSK_SEN3(map):
 
-#     try:
+    try:
 
-#         if not map.endswith('.html'):
-#             map += '.html'
+        if not map.endswith('.html'):
+            map += '.html'
 
-#         # Detect the current page
-#         segment = get_segment(request)
+        # Detect the current page
+        segment = get_segment(request)
 
-#         # Serve the file (if exists) from app/templates/home/FILE.html
-#         return render_template("home/Alborean/CSK-SEN/" + map, segment=segment)
+        # Serve the file (if exists) from app/templates/home/FILE.html
+        return render_template("home/Egadi/CSK-SEN/" + map, segment=segment)
 
-#     except TemplateNotFound:
-#         return render_template('home/page-404.html'), 404
+    except TemplateNotFound:
+        return render_template('home/page-404.html'), 404
 
-#     except:
-#         return render_template('home/page-500.html'), 500
-
-
-# @blueprint.route('Alborean/CSK-SAO/<map>')
-# @login_required
-# def route_CSK_SAO2(map):
-
-#     try:
-
-#         if not map.endswith('.html'):
-#             map += '.html'
-
-#         # Detect the current page
-#         segment = get_segment(request)
-
-#         # Serve the file (if exists) from app/templates/home/FILE.html
-#         return render_template("home/Alborean/CSK-SAO/" + map, segment=segment)
-
-#     except TemplateNotFound:
-#         return render_template('home/page-404.html'), 404
-
-#     except:
-#         return render_template('home/page-500.html'), 500
+    except:
+        return render_template('home/page-500.html'), 500
 
 
+@blueprint.route('Alborean/CSK-SEN/<map>')
+@login_required
+def route_CSK_SEN2(map):
 
-# @blueprint.route('/CSK-SAO/<map>')
-# @login_required
-# def route_CSK_SAO(map):
+    try:
 
-#     try:
+        if not map.endswith('.html'):
+            map += '.html'
 
-#         if not map.endswith('.html'):
-#             map += '.html'
+        # Detect the current page
+        segment = get_segment(request)
 
-#         # Detect the current page
-#         segment = get_segment(request)
+        # Serve the file (if exists) from app/templates/home/FILE.html
+        return render_template("home/Alborean/CSK-SEN/" + map, segment=segment)
 
-#         # Serve the file (if exists) from app/templates/home/FILE.html
-#         return render_template("home/Adriatico/CSK-SAO/" + map, segment=segment)
+    except TemplateNotFound:
+        return render_template('home/page-404.html'), 404
 
-#     except TemplateNotFound:
-#         return render_template('home/page-404.html'), 404
+    except:
+        return render_template('home/page-500.html'), 500
 
-#     except:
-#         return render_template('home/page-500.html'), 500
 
-# @blueprint.route('/CSK-SEN/<map>')
-# @login_required
-# def route_CSK_SEN(map):
+@blueprint.route('Alborean/CSK-SAO/<map>')
+@login_required
+def route_CSK_SAO2(map):
 
-#     try:
+    try:
 
-#         if not map.endswith('.html'):
-#             map += '.html'
+        if not map.endswith('.html'):
+            map += '.html'
 
-#         # Detect the current page
-#         segment = get_segment(request)
+        # Detect the current page
+        segment = get_segment(request)
 
-#         # Serve the file (if exists) from app/templates/home/FILE.html
-#         return render_template("home/Adriatico/CSK-SEN/" + map, segment=segment)
+        # Serve the file (if exists) from app/templates/home/FILE.html
+        return render_template("home/Alborean/CSK-SAO/" + map, segment=segment)
 
-#     except TemplateNotFound:
-#         return render_template('home/page-404.html'), 404
+    except TemplateNotFound:
+        return render_template('home/page-404.html'), 404
 
-#     except:
-#         return render_template('home/page-500.html'), 500
+    except:
+        return render_template('home/page-500.html'), 500
+
+
+
+@blueprint.route('/CSK-SAO/<map>')
+@login_required
+def route_CSK_SAO(map):
+
+    try:
+
+        if not map.endswith('.html'):
+            map += '.html'
+
+        # Detect the current page
+        segment = get_segment(request)
+
+        # Serve the file (if exists) from app/templates/home/FILE.html
+        return render_template("home/Adriatico/CSK-SAO/" + map, segment=segment)
+
+    except TemplateNotFound:
+        return render_template('home/page-404.html'), 404
+
+    except:
+        return render_template('home/page-500.html'), 500
+
+@blueprint.route('/CSK-SEN/<map>')
+@login_required
+def route_CSK_SEN(map):
+
+    try:
+
+        if not map.endswith('.html'):
+            map += '.html'
+
+        # Detect the current page
+        segment = get_segment(request)
+
+        # Serve the file (if exists) from app/templates/home/FILE.html
+        return render_template("home/Adriatico/CSK-SEN/" + map, segment=segment)
+
+    except TemplateNotFound:
+        return render_template('home/page-404.html'), 404
+
+    except:
+        return render_template('home/page-500.html'), 500
 
 
 # Helper - Extract current page name from request
