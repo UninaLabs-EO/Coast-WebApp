@@ -45,7 +45,7 @@ def route_template(template):
     ega_csk_sen = GetRouteValues('apps\\templates\\home\\Egadi\\CSK-SEN\\ALL_Egadi_CSK-SEN.csv', 'apps\\templates\\home\\Egadi\\CSK-SEN', 'CSK','SEN')
 
     sar_csk_sao = GetRouteValues('apps\\templates\\home\\Sardegna\\CSK-SAO\\ALL_Sardegna_CSK-SAO.csv', 'apps\\templates\\home\\Sardegna\\CSK-SAO', 'CSK','SAO')
-    sar_csk_sen = GetRouteValues('apps\\t
+    sar_csk_sen = GetRouteValues('apps\\templates\\home\\Sardegna\\CSK-SEN\\ALL_Sardegna_CSK-SEN.csv', 'apps\\templates\\home\\Sardegna\\CSK-SEN', 'CSK','SEN')
 
 
     try:
