@@ -16,10 +16,7 @@ from Router_Values import GetRouteValues
 @login_required
 def index():
 
-
-    adr_csk_sao = GetRouteValues('apps/templates/home/Adriatico/CSK-SAO/ALL_Adriatic_CSK-SAO.csv', 'apps/templates/home/Adriatico/CSK-SAO', 'CSK','SAO')
-
-    return render_template('home/index.html', segment='index', a1=adr_csk_sao,
+    return render_template('home/index.html', segment='index', 
     )
 
 
