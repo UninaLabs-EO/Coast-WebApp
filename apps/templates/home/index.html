@@ -21,6 +21,40 @@ crossorigin=""></script>
 To be written. 
 
 
+<!-- [ Hover-table ] start -->
+<div class="card-header">
+    <h5>Adriatico CSK-SAO</h5>
+    <span class="d-block m-t-5">Lista prodotti Cosmo & SAOCOM </span>
+</div>
+<div class="card-block table-border-style">
+    <div class="table-responsive">
+         <table class="table table-hover">
+              <thead>
+              <tr>
+                   <th>#</th>
+                   <th>COSMO-SKYMED</th>
+                   <th>SAOCOM</th>
+                   <th>MATCH</th>
+                   <th>LINK</th>
+              </tr>
+              </thead>
+              <tbody>
+              {% for i in a1['idx'] %}
+                   <tr>
+                        <th scope="row">{{ i }}</th>
+                        <td>{{a1['CSK'][i]}}</td>
+                        <td>{{a1['SAO'][i]}}</td>
+                        <td>{{a1['links'][i].split('_')[-1].split('.')[0]}}</td>
+                        <td><a href="./CSK-SAO/{{ a1['links'][i] }}">URL</a></td>
+                   </tr>
+              {% endfor %}
+              </tbody>
+         </table>
+    </div>
+</div>
+<!-- [ Hover-table ] end --> 
+
+
 {% endblock content %}
 
 <!-- Specific Page JS goes HERE  -->
