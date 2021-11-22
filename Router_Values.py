@@ -20,9 +20,9 @@ def GetRouteValues(df_path, dir_path, prod1, prod2):
     idx = df['Unnamed: 0'].to_list()
 
 
-    hrefs = glob(dir_path+'\\*.html')
+    hrefs = glob(dir_path+'/*.html')
     hrefs = sorted(hrefs, key=lambda x: int(x.split('_')[1].split('__')[0]))
-    hrefs = [x.split('\\')[-1] for x in hrefs]
+    hrefs = [x.split('/')[-1] for x in hrefs]
 
     out = {'idx':idx, f'{prod1}':Prod1, f'{prod2}':Prod2, 'links':hrefs}
     return out
