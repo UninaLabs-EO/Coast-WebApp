@@ -5,22 +5,14 @@
 <!-- Specific CSS goes HERE -->
 {% block stylesheets %}
 
-
-<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-crossorigin=""></script>
 {% endblock stylesheets %}
 
 {% block content %}
-
-
-
-
+prova
 
                          <!-- [ Hover-table ] start -->
-                         <div class="card-header">
-                              <h5>Adriatico CSK-SAO</h5>
+                         <!-- <div class="card-header">
+                              <h5>Alborean CSK-SAO</h5>
                               <span class="d-block m-t-5">Lista prodotti Cosmo & SAOCOM </span>
                          </div>
                          <div class="card-block table-border-style">
@@ -35,25 +27,25 @@ crossorigin=""></script>
                                              <th>LINK</th>
                                         </tr>
                                         </thead>
-                                        <tbody>
-                                        {% for i in a1['idx'] %}
+                                        <tbody> -->
+                                        <!-- {% for i in b1['idx'] %}
                                              <tr>
                                                   <th scope="row">{{ i }}</th>
-                                                  <td>{{a1['CSK'][i]}}</td>
-                                                  <td>{{a1['SAO'][i]}}</td>
-                                                  <td>{{a1['links'][i].split('_')[-1].split('.')[0]}}</td>
-                                                  <td><a href="./CSK-SAO/{{ a1['links'][i] }}">URL</a></td>
+                                                  <td>{{b1['CSK'][i]}}</td>
+                                                  <td>{{b1['SAO'][i]}}</td>
+                                                  <td>{{b1['links'][i].split('_')[-1].split('.')[0]}}</td>
+                                                  <td><a href="./Alborean/CSK-SAO/{{ b1['links'][i] }}">URL</a></td>
                                              </tr>
-                                        {% endfor %}
-                                        </tbody>
+                                        {% endfor %} -->
+                                        <!-- </tbody>
                                    </table>
                               </div>
-                         </div>
+                         </div> -->
                          <!-- [ Hover-table ] end --> 
 
       
                       <!-- [ Hover-table ] start -->
-                      <div class="card-header">
+                      <!-- <div class="card-header">
                           <h5>Adriatico CSK-SENTINEL</h5>
                           <span class="d-block m-t-5">Lista prodotti Cosmo & Sentinel </span>
                       </div>
@@ -73,16 +65,16 @@ crossorigin=""></script>
                                       {% for i in a2['idx'] %}
                                           <tr>
                                               <th scope="row">{{ i }}</th>
-                                              <td>{{a2['CSK'][i]}}</td>
-                                              <td>{{a2['SEN'][i]}}</td>
-                                              <td>{{a2['links'][i].split('_')[-1].split('.')[0]}}</td>
-                                              <td><a href="./CSK-SEN/{{ a2['links'][i] }}">URL</a></td>
+                                              <td>{{b2['CSK'][i]}}</td>
+                                              <td>{{b2['SEN'][i]}}</td>
+                                              <td>{{b2['links'][i].split('_')[-1].split('.')[0]}}</td>
+                                              <td><a href="./Alborean/CSK-SEN/{{ b2['links'][i] }}">URL</a></td>
                                           </tr>
                                       {% endfor %}
                                   </tbody>
                               </table>
                           </div>
-                      </div>
+                      </div> -->
                       <!-- [ Hover-table ] end --> 
 {% endblock content %}
 
