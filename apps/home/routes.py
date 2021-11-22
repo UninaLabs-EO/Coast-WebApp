@@ -16,18 +16,12 @@ from Router_Values import GetRouteValues
 @login_required
 def index():
 
-    return render_template('home/index.html', segment='index', 
+
+    adr_csk_sao = GetRouteValues('apps/templates/home/Adriatico/CSK-SAO/ALL_Adriatic_CSK-SAO.csv', 'apps/templates/home/Adriatico/CSK-SAO', 'CSK','SAO')
+
+    return render_template('home/index.html', segment='index', a1=adr_csk_sao,
     )
 
-@blueprint.route('/adriatico')
-@login_required
-def adriatico():
-    adr_csk_sao = GetRouteValues('apps/templates/home/Adriatico/CSK-SAO/ALL_Adriatic_CSK-SAO.csv', 'apps/templates/home/Adriatico/CSK-SAO', 'CSK','SAO')
-    adr_csk_sen = GetRouteValues('apps/templates/home/Adriatico/CSK-SEN/ALL_Adriatic_CSK-SEN.csv','apps/templates/home/Adriatico/CSK-SEN', 'CSK','SEN' )
-    
-    return render_template('home/adriatico.html', segment='adriatico', 
-        a1=adr_csk_sao, a2=adr_csk_sen,
-    )
 
 
 @blueprint.route('/<template>')
