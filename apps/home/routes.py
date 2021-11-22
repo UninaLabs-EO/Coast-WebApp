@@ -39,13 +39,13 @@ def route_template(template):
     adr_csk_sao = GetRouteValues('apps/templates/home/Adriatico/CSK-SAO/ALL_Adriatic_CSK-SAO.csv', 'apps/templates/home/Adriatico/CSK-SAO', 'CSK','SAO')
     adr_csk_sen = GetRouteValues('apps/templates/home/Adriatico/CSK-SEN/ALL_Adriatic_CSK-SEN.csv','apps/templates/home/Adriatico/CSK-SEN', 'CSK','SEN' )
 
-    alb_csk_sao = GetRouteValues('apps\\templates\\home\\Alborean\\CSK-SAO\\ALL_Alborean_CSK-SAO.csv', 'apps\\templates\\home\\Alborean\\CSK-SAO', 'CSK','SAO')
-    alb_csk_sen = GetRouteValues('apps\\templates\\home\\Alborean\\CSK-SEN\\ALL_Alborean_CSK-SEN.csv', 'apps\\templates\\home\\Alborean\\CSK-SEN', 'CSK','SEN')
+    alb_csk_sao = GetRouteValues('apps/templates/home/Alborean/CSK-SAO/ALL_Alborean_CSK-SAO.csv', 'apps/templates/home/Alborean/CSK-SAO', 'CSK','SAO')
+    alb_csk_sen = GetRouteValues('apps/templates/home/Alborean/CSK-SEN/ALL_Alborean_CSK-SEN.csv', 'apps/templates/home/Alborean/CSK-SEN', 'CSK','SEN')
 
-    ega_csk_sen = GetRouteValues('apps\\templates\\home\\Egadi\\CSK-SEN\\ALL_Egadi_CSK-SEN.csv', 'apps\\templates\\home\\Egadi\\CSK-SEN', 'CSK','SEN')
+    ega_csk_sen = GetRouteValues('apps/templates/home/Egadi/CSK-SEN/ALL_Egadi_CSK-SEN.csv', 'apps/templates/home/Egadi/CSK-SEN', 'CSK','SEN')
 
-    sar_csk_sao = GetRouteValues('apps\\templates\\home\\Sardegna\\CSK-SAO\\ALL_Sardegna_CSK-SAO.csv', 'apps\\templates\\home\\Sardegna\\CSK-SAO', 'CSK','SAO')
-    sar_csk_sen = GetRouteValues('apps\\templates\\home\\Sardegna\\CSK-SEN\\ALL_Sardegna_CSK-SEN.csv', 'apps\\templates\\home\\Sardegna\\CSK-SEN', 'CSK','SEN')
+    sar_csk_sao = GetRouteValues('apps/templates/home/Sardegna/CSK-SAO/ALL_Sardegna_CSK-SAO.csv', 'apps/templates/home/Sardegna/CSK-SAO', 'CSK','SAO')
+    sar_csk_sen = GetRouteValues('apps/templates/home/Sardegna/CSK-SEN/ALL_Sardegna_CSK-SEN.csv', 'apps/templates/home/Sardegna/CSK-SEN', 'CSK','SEN')
 
 
     try:
