@@ -13,7 +13,7 @@ import pandas as pd
 from Router_Values import GetRouteValues
 
 @blueprint.route('/index')
-@login_required
+# @login_required
 def index():
 
     return render_template('home/index.html', segment='index', 
@@ -22,7 +22,7 @@ def index():
 
 
 @blueprint.route('/<template>')
-@login_required
+# @login_required
 def route_template(template):
 
 
@@ -73,7 +73,7 @@ def route_template(template):
 
 
 @blueprint.route('Sardegna/CSK-SAO/<map>')
-@login_required
+# @login_required
 def route_CSK_SAO4(map):
 
     try:
