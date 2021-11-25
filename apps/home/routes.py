@@ -12,7 +12,6 @@ from Router_Values import GetRouteValues
 
 @blueprint.route('/index')
 def index():
-
     return render_template('home/index.html', segment='index', 
     )
 
