@@ -7,13 +7,10 @@ from apps.home import blueprint
 from flask import render_template, request
 from flask_login import login_required
 from jinja2 import TemplateNotFound
-from glob import glob
-import pandas as pd
 
 from Router_Values import GetRouteValues
 
 @blueprint.route('/index')
-# @login_required
 def index():
 
     return render_template('home/index.html', segment='index', 
@@ -22,20 +19,7 @@ def index():
 
 
 @blueprint.route('/<template>')
-# @login_required
 def route_template(template):
-
-
-    # adr_csk_sao = GetRouteValues('apps\\templates\\home\\Adriatico\\CSK-SAO\\ALL_Adriatic_CSK-SAO.csv', 'apps\\templates\\home\\Adriatico\\CSK-SAO', 'CSK','SAO')
-    # adr_csk_sen = GetRouteValues('apps\\templates\\home\\Adriatico\\CSK-SEN\\ALL_Adriatic_CSK-SEN.csv','apps\\templates\\home\\Adriatico\\CSK-SEN', 'CSK','SEN' )
-
-    # alb_csk_sao = GetRouteValues('apps\\templates\\home\\Alborean\\CSK-SAO\\ALL_Alborean_CSK-SAO.csv', 'apps\\templates\\home\\Alborean\\CSK-SAO', 'CSK','SAO')
-    # alb_csk_sen = GetRouteValues('apps\\templates\\home\\Alborean\\CSK-SEN\\ALL_Alborean_CSK-SEN.csv', 'apps\\templates\\home\\Alborean\\CSK-SEN', 'CSK','SEN')
-
-    # ega_csk_sen = GetRouteValues('apps\\templates\\home\\Egadi\\CSK-SEN\\ALL_Egadi_CSK-SEN.csv', 'apps\\templates\\home\\Egadi\\CSK-SEN', 'CSK','SEN')
-
-    # sar_csk_sao = GetRouteValues('apps\\templates\\home\\Sardegna\\CSK-SAO\\ALL_Sardegna_CSK-SAO.csv', 'apps\\templates\\home\\Sardegna\\CSK-SAO', 'CSK','SAO')
-    # sar_csk_sen = GetRouteValues('apps\\templates\\home\\Sardegna\\CSK-SEN\\ALL_Sardegna_CSK-SEN.csv', 'apps\\templates\\home\\Sardegna\\CSK-SEN', 'CSK','SEN')
 
     adr_csk_sao = GetRouteValues('apps/templates/home/Adriatico/CSK-SAO/ALL_Adriatic_CSK-SAO.csv', 'apps/templates/home/Adriatico/CSK-SAO', 'CSK','SAO')
     adr_csk_sen = GetRouteValues('apps/templates/home/Adriatico/CSK-SEN/ALL_Adriatic_CSK-SEN.csv','apps/templates/home/Adriatico/CSK-SEN', 'CSK','SEN' )
@@ -73,7 +57,6 @@ def route_template(template):
 
 
 @blueprint.route('Sardegna/CSK-SAO/<map>')
-# @login_required
 def route_CSK_SAO4(map):
 
     try:
@@ -94,7 +77,6 @@ def route_CSK_SAO4(map):
         return render_template('home/page-500.html'), 500
 
 @blueprint.route('Sardegna/CSK-SEN/<map>')
-@login_required
 def route_CSK_SEN4(map):
 
     try:
@@ -116,7 +98,6 @@ def route_CSK_SEN4(map):
 
 
 @blueprint.route('Egadi/CSK-SEN/<map>')
-@login_required
 def route_CSK_SEN3(map):
 
     try:
@@ -138,7 +119,6 @@ def route_CSK_SEN3(map):
 
 
 @blueprint.route('Alborean/CSK-SEN/<map>')
-@login_required
 def route_CSK_SEN2(map):
 
     try:
@@ -160,7 +140,6 @@ def route_CSK_SEN2(map):
 
 
 @blueprint.route('Alborean/CSK-SAO/<map>')
-@login_required
 def route_CSK_SAO2(map):
 
     try:
@@ -183,7 +162,6 @@ def route_CSK_SAO2(map):
 
 
 @blueprint.route('/CSK-SAO/<map>')
-@login_required
 def route_CSK_SAO(map):
 
     try:
@@ -204,7 +182,6 @@ def route_CSK_SAO(map):
         return render_template('home/page-500.html'), 500
 
 @blueprint.route('/CSK-SEN/<map>')
-@login_required
 def route_CSK_SEN(map):
 
     try:
