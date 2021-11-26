@@ -8,17 +8,54 @@
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
 integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
 crossorigin=""></script>
+
+
+
 {% endblock stylesheets %}
 
 {% block content %}
 
-<h1>
-    HOME
-</h1>
+<ul class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/"><i class="feather icon-home"></i></a></li>
+    <li class="breadcrumb-item"><a href="javascript:">Index</a></li>
+</ul>
 <hr>
-<img src="/static/assets/images/user/coast.png" alt="Picture of a Ha Long Bay sunset">
+<br>
+<br>
+<img src="/static/assets/images/user/unina_logo.png" width="450" alt="Logo Coast" style="display: block; margin-left: auto; margin-right: auto;">
+<p style="border:15px; padding-left: 4em; padding-right: 4em; padding-top: 3em; text-align: justify;">
+    The Unina Remote Sensing Group (URSG), based at University Federico II in Naples, Italy, is part of a national and international network of scientists that undertake quantitative research in the field of Earth observations from space.
+    The group's research studies focus on the processing and analysis of active and passive remotely sensed data and relevant scientific studies for improving maritime domain awareness.
+</p>
+
+<h4 style="text-align: center; color: #888;">
+    Our Latest Projects:
+</h4>
+
+
+<div class="row">
+
+    <div class="column">
+        <img src="/static/assets/images/user/coast.png" style="width: 230px; " alt="Logo Coast" > 
+        <hr> 
+        <p style="font-style: italic; font-weight: bold; font-size: larger;"> Coast Project </p> 
+        COastal Area monitoring with SAR data and multimission/multifrequency Techniques 
+    </div>
+    
+    <div class="column">
+        <img src="/static/assets/images/user/argo.png" style="width: 100px;" alt="Logo Argo" >
+        <hr> 
+        <p style="font-style: italic; font-weight: bold; font-size: larger;"> Argo Project </p> 
+        A wake Revelation system for GO-fast vessels
+    </div>
+
+</div>
 <hr>
-To be written. 
+
+<h4 class="latest-article">
+    Latest Articles:
+</h4>
+
 
 
 
