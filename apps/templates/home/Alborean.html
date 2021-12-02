@@ -1,79 +1,99 @@
 {% extends "layouts/base.html" %}
 
-{% block title %} UI Typography {% endblock %} 
+{% block title %} Alborean {% endblock %} 
 
 <!-- Specific CSS goes HERE -->
 {% block stylesheets %}{% endblock stylesheets %}
 
 {% block content %}
 
-            <!-- [ Hover-table ] start -->
-                         <div class="card-header">
-                              <h5>Alborean CSK-SAO</h5>
-                              <span class="d-block m-t-5">Lista prodotti Cosmo & SAOCOM </span>
-                         </div>
-                         <div class="card-block table-border-style">
-                              <div class="table-responsive">
-                                   <table class="table table-hover">
-                                        <thead>
-                                        <tr>
-                                             <th>#</th>
-                                             <th>COSMO-SKYMED</th>
-                                             <th>SAOCOM</th>
-                                             <th>MATCH</th>
-                                             <th>LINK</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                            {% for i in b1['idx'] %}
-                                                <tr>
-                                                    <th scope="row">{{ i }}</th>
-                                                    <td>{{b1['CSK'][i]}}</td>
-                                                    <td>{{b1['SAO'][i]}}</td>
-                                                    <td>{{b1['links'][i].split('_')[-1].split('.')[0]}}</td>
-                                                    <td><a href="./Alborean/CSK-SAO/{{ b1['links'][i] }}">URL</a></td>
-                                                </tr>
-                                            {% endfor %}
-                                        </tbody>
-                                   </table>
-                              </div>
-                         </div>
-                         <!-- [ Hover-table ] end --> 
 
-                            <!-- [ Hover-table ] start -->
-                            <div class="card-header">
-                                <h5>Alborean CSK-SEN</h5>
-                                <span class="d-block m-t-5">Lista prodotti Cosmo & SENTINEL </span>
-                           </div>
-                           <div class="card-block table-border-style">
-                                <div class="table-responsive">
-                                     <table class="table table-hover">
-                                          <thead>
-                                          <tr>
-                                               <th>#</th>
-                                               <th>COSMO-SKYMED</th>
-                                               <th>SENTINEL</th>
-                                               <th>MATCH</th>
-                                               <th>LINK</th>
-                                          </tr>
-                                          </thead>
-                                          <tbody>
-                                              {% for i in b2['idx'] %}
-                                                  <tr>
-                                                      <th scope="row">{{ i }}</th>
-                                                      <td>{{b2['CSK'][i]}}</td>
-                                                      <td>{{b2['SEN'][i]}}</td>
-                                                      <td>{{b2['links'][i].split('_')[-1].split('.')[0]}}</td>
-                                                      <td><a href="./Alborean/CSK-SEN/{{ b2['links'][i] }}">URL</a></td>
-                                                  </tr>
-                                              {% endfor %}
-                                          </tbody>
-                                     </table>
-                                </div>
-                           </div>
-                           <!-- [ Hover-table ] end -->
+<div class="col-sm-12">
+     <h5 class="mt-4">Scenario 2: Alborean</h5>
+     <hr>
+     <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+         <li class="nav-item">
+             <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">CSK-SAO</a>
+         </li>
+         <li class="nav-item">
+             <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">CSK-SEN</a>
+         </li>
+     </ul>
+     <div class="tab-content" id="pills-tabContent">
+         <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+             
+             <div class="card-block table-border-style">
+                 <div class="table-responsive">
+                    <table class="table table-hover" id="alborean1">
+                         <thead>
+                         <tr>
+                              <th>#</th>
+                              <th>COSMO-SKYMED</th>
+                              <th>SAOCOM</th>
+                              <th>MATCH</th>
+                              <th>LINK</th>
+                         </tr>
+                         </thead>
+                         <tbody>
+                             {% for i in d1['idx'] %}
+                                 <tr>
+                                     <th scope="row">{{ i }}</th>
+                                     <td>{{d1['CSK'][i]}}</td>
+                                     <td>{{d1['SAO'][i]}}</td>
+                                     <td>{{d1['links'][i].split('_')[-1].split('.')[0]}}</td>
+                                     <td><a href="./Sardegna/CSK-SAO/{{ d1['links'][i] }}">URL</a></td>
+                                 </tr>
+                             {% endfor %}
+                         </tbody>
+                    </table>
+                 </div>
+             </div>
+             
+         </div>
+         <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+               <div class="table-responsive">
+                    <table class="table table-hover" id="alborean2">
+                         <thead>
+                         <tr>
+                              <th>#</th>
+                              <th>COSMO-SKYMED</th>
+                              <th>SENTINEL</th>
+                              <th>MATCH</th>
+                              <th>LINK</th>
+                         </tr>
+                         </thead>
+                         <tbody>
+                         {% for i in b2['idx'] %}
+                              <tr>
+                                   <th scope="row">{{ i }}</th>
+                                   <td>{{b2['CSK'][i]}}</td>
+                                   <td>{{b2['SEN'][i]}}</td>
+                                   <td>{{b2['links'][i].split('_')[-1].split('.')[0]}}</td>
+                                   <td><a href="./Alborean/CSK-SEN/{{ b2['links'][i] }}">URL</a></td>
+                              </tr>
+                         {% endfor %}
+                         </tbody>
+                    </table>
+               </div>
+         </div>
+     </div>
+ </div>
+
+ 
 
 {% endblock content %}
 
 <!-- Specific Page JS goes HERE  -->
-{% block javascripts %}{% endblock javascripts %}
+{% block javascripts %}
+<script>
+     $(document).ready(function () {
+       $('#alborean1').DataTable({  });
+     });
+ </script>
+ 
+ <script>
+     $(document).ready(function () {
+       $('#alborean2').DataTable({  });
+     });
+ </script>
+{% endblock javascripts %}

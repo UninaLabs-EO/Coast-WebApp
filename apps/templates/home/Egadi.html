@@ -47,7 +47,7 @@
                            </div>
                            <div class="card-block table-border-style">
                                 <div class="table-responsive">
-                                     <table class="table table-hover">
+                                     <table class="table table-hover" id="egadi">
                                           <thead>
                                           <tr>
                                                <th>#</th>
@@ -76,4 +76,10 @@
 {% endblock content %}
 
 <!-- Specific Page JS goes HERE  -->
-{% block javascripts %}{% endblock javascripts %}
+{% block javascripts %}
+<script>
+     $(document).ready(function () {
+       $('#egadi').DataTable({  });
+     });
+ </script>
+{% endblock javascripts %}

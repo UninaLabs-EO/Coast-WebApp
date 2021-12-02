@@ -17,23 +17,31 @@
                     <li class="nav-item pcoded-menu-caption">
                         <label>Navigation</label>
                     </li>
-                    <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" 
+                    <li data-username="Dashboard Default" 
                         class="nav-item {% if 'index' in segment %} active {% endif %}">
                         <a href="/" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Home</span></a>
                     </li>
                     <li class="nav-item pcoded-menu-caption">
-                        <label> Scenario Analysis </label> </li>
+                        <label> Projects </label> 
+                    </li>
                     
                         <li data-username="basic components Button Alert Badges breadcrumb Paggination progress Tooltip popovers Carousel Cards Collapse Tabs pills Modal Grid System Typography Extra Shadows Embeds" class="nav-item pcoded-hasmenu">
-                        <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Footprint Match</span></a>
-                        <ul class="pcoded-submenu">
-                            <li class=""><a href="/Scen1_Adr.html" class="">Adriatico</a></li>
-                            <li class=""><a href="/Alborean.html" class="">Alborean</a></li>
-                            <li class=""><a href="/Egadi.html" class="">Egadi</a></li>
-                            <li class=""><a href="/Sardegna.html" class="">Sardegna</a></li>
-                            <!-- <li class=""><a href="/propulsion.html" class="">Prosulsion</a></li>
-                            <li class=""><a href="/ttc.html" class="">TTC</a></li>  -->
-                        </ul>
+                            <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">COAST</span></a>
+                            <ul class="pcoded-submenu">
+                                <li data-username="basic components Button Alert Badges breadcrumb Paggination progress Tooltip popovers Carousel Cards Collapse Tabs pills Modal Grid System Typography Extra Shadows Embeds" class="nav-item pcoded-hasmenu">
+                                <div class="footprint-match" id='navbar01'>
+                                    <span class="pcoded-micon"><i class="feather icon-map"></i></span><span class="pcoded-mtext" id="text-FootprintMatch">FootPrint Match</span>
+                                </div>
+                                        <ul>
+                                            <li class=""><a href="/Scen1_Adr.html" class="">Adriatico</a></li>
+                                            <li class=""><a href="/Alborean.html" class="">Alborean</a></li>
+                                            <li class=""><a href="/Egadi.html" class="">Egadi</a></li>
+                                            <li class=""><a href="/Sardegna.html" class="">Sardegna</a></li>
+                                        </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    
                          <!-- </li>
                             <ul class="nav pcoded-inner-navbar">
                                 <li data-username="basic components Button Alert Badges breadcrumb Paggination progress Tooltip popovers Carousel Cards Collapse Tabs pills Modal Grid System Typography Extra Shadows Embeds" class="nav-item pcoded-hasmenu">
@@ -97,17 +105,9 @@
                         <a href="/page-blank.html" class="nav-link"><span class="pcoded-micon"><i class="feather icon-sidebar"></i></span><span class="pcoded-mtext">Sample page</span></a></li>
                     <li data-username="Sample Page" class="nav-item"><a href="/page-404.html" class="nav-link"><span class="pcoded-micon"><i class="feather icon-sidebar"></i></span><span class="pcoded-mtext">Error 404</span></a></li> -->
 
-                    <li data-username="Disabled Menu" class="nav-item">
-                        <a href="{{ url_for('authentication_blueprint.logout') }}" class="nav-link">
-                            <span class="pcoded-micon"><i class="feather icon-power"></i></span><span class="pcoded-mtext">Logout</span>
-                        </a>
-                    </li>
+                    
                 </ul>
             </div>
 
-            <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" 
-                        class="nav-item {% if 'index' in segment %} active {% endif %}">
-                        <a href="/" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">GS</span></a>
-            </li>
         </div>
     </nav>

@@ -1,39 +1,8 @@
-    <!-- Required Js -->
-    <script src="/static/assets/js/vendor-all.min.js"></script>
-    <script src="/static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/static/assets/js/pcoded.min.js"></script>
+<!-- Required Js -->
+<script src="/static/assets/js/vendor-all.min.js"></script>
+<script src="/static/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="/static/assets/js/pcoded.min.js"></script>
 
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.js"></script>
 
-    <script type="text/javascript">
-        // The first parameter are the coordinates of the center of the map
-        // The second parameter is the zoom level
-        var map = L.map('map').setView([40.712, -74.006], 2);
-        
-        // {s}, {z}, {x} and {y} are placeholders for map tiles
-        // {x} and {y} are the x/y of where you are on the map
-        // {z} is the zoom level
-        // {s} is the subdomain of cartodb
-          var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-          attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
-        });
-        
-        var Icon = L.icon({
-          iconUrl: 'https://cdn-icons-png.flaticon.com/512/936/936512.png',
-          iconSize:     [25, 25], // size of the icon
-          iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-          popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-      });
-
-      var Sat = L.icon({
-          iconUrl: 'https://cdn-icons-png.flaticon.com/512/1025/1025123.png',
-          iconSize:     [25, 25], // size of the icon
-          iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-          popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-      });
-
-
-      L.marker([-53, -70], {icon: Icon}).addTo(map);
-      L.marker([-10, 10], {icon: Sat}).addTo(map);
-        // Now add the layer onto the map
-        map.addLayer(layer);
-      </script>

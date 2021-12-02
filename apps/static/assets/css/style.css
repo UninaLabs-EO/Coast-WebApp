@@ -59,6 +59,44 @@ File: style.css
 ==========================  **/
 /* Side-by-side images */
  /* Three image containers (use 25% for four, and 50% for two, etc) */
+#navbar01 {
+  text-align: left;
+  padding-left: 10%;
+  width: 100%;
+}
+
+#text-FootprintMatch {
+  padding-left: 8%;
+  font-weight: bold;
+
+
+}
+
+ p.index-title {
+  color: #0386c3;
+  font-size: 36px;
+  width: 100;
+  display: block;
+  text-align: center;
+  /* border: 1px solid #000000; */
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+}
+
+[stile=sottotitolo] {
+  border:15px; 
+  padding-left: 4em; 
+  padding-right: 4em; 
+  padding-top: 0em; 
+  font-size: 18px;
+  font-family: 'Raleway', sans-serif;
+
+  text-align: justify;
+}
 
 .latest-article{
   padding-left: 50px;
@@ -79,7 +117,7 @@ File: style.css
 /* end side by side */
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 14px;
   color: #888;
   font-weight: 400;
@@ -104,6 +142,7 @@ h5,
 h6 {
   color: #111;
   font-weight: 400;
+  font-family: 'Raleway', sans-serif;
 }
 
 h1 {
